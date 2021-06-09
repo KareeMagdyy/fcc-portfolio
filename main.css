@@ -1,0 +1,242 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200;1,400&family=Raleway:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* NavBar Start */
+#mainNavBar {
+  background-color: #be3144;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  width: 100%;
+}
+
+#mainNavBar a {
+  text-decoration: none;
+  color: #eee9ea;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+#mainNavBar a:last-child {
+  margin-right: 1.5rem;
+}
+
+#mainNavBar a:hover,
+#mainNavBar a:focus {
+  background-color: #45567d;
+}
+
+@media (max-width: 600px) {
+  #mainNavBar {
+    justify-content: center;
+  }
+
+  #mainNavBar a:last-child {
+    margin-right: 0;
+  }
+}
+/* NavBar End */
+
+/* Welcome Area Start */
+.welcome-area {
+  background-color: #3a3d40;
+  background: linear-gradient(
+    66deg,
+    rgba(58, 61, 64, 1) 0%,
+    rgba(29, 29, 31, 1) 100%
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-area h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: #f0f0f0;
+}
+
+.welcome-area p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1.9rem;
+  color: #be3144;
+}
+
+@media (max-width: 600px) {
+  .welcome-area h1 {
+    font-size: 2.8rem;
+  }
+  .welcome-area p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .welcome-area h1 {
+    font-size: 2rem;
+  }
+  .welcome-area p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Welcome Area End */
+
+.projects-section {
+  background-color: #45567d;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.projects-section h2 {
+  padding-bottom: 0.5rem;
+  max-width: 650px;
+  color: #f0f0f0;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 0 auto 5rem auto;
+}
+
+@media (max-width: 700px) {
+  .projects-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1200px;
+  grid-gap: 4rem;
+  margin: 0 auto 4rem auto;
+}
+
+.project {
+  background-color: #303841;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-img {
+  height: calc(100% - 6rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-name {
+  font-size: 1.7rem;
+  color: #f0f0f0;
+  font-family: Poppins, sans-serif;
+  padding: 1.5rem 0.5rem;
+}
+
+.code {
+  color: #303841;
+  transition: color 350ms ease-in;
+}
+
+.show-more__btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #303841;
+  text-decoration: none;
+  color: #f0f0f0;
+  border-radius: 4px;
+  font-family: Poppins, sans-serif;
+  font-size: 1.3rem;
+  transition: all 600ms;
+}
+
+.show-more__btn::after {
+  content: " →";
+  display: none;
+  color: #f0f0f0;
+}
+
+.show-more__btn:hover:after {
+  display: inline;
+}
+
+.show-more__btn:hover {
+  background-color: #be3144;
+}
+
+/* Projects End */
+
+/* Contact Start */
+.contact {
+  padding-top: 8rem auto 2rem auto;
+  height: 80vh;
+  text-align: center;
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact h2 {
+  font-family: Raleway, sans-serif;
+  font-size: 3.75rem;
+  color: #f0f0f0;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-family: Poppins, sans-serif;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  font-style: italic;
+}
+
+.social-links {
+  display: flex;
+  width: 100%;
+  max-width: 1080px;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+}
+
+.social-links a {
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #f0f0f0;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.social-links a:hover {
+  transform: translateY(8px);
+}
+
+@media (max-width: 660px) {
+  .social-links {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Contact End */
