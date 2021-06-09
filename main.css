@@ -237,6 +237,14 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .social-links a {
+    margin-bottom: 15px;
+  }
+
+  .social-links a:hover {
+    transform: translateY(4px);
+  }
 }
 
 /* Contact End */
